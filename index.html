@@ -114,6 +114,15 @@
     .statusbox,.fund{padding:20px}
     .statusbox img.logo,.fund img{width:140px;height:140px}
   }
+
+  /* === Split-fur background tune (2026-11-06): page floats over Muse's split fur, like the profile picture === */
+  body{background:#100e0b}
+  body::before{content:"";position:fixed;top:0;bottom:0;left:0;width:50%;background:url('fur-bg-black.webp') center/cover;z-index:-2}
+  body::after{content:"";position:fixed;top:0;bottom:0;right:0;width:50%;background:url('fur-bg-white.webp') center/cover;z-index:-2}
+  section:not(.hero):not(.darksec):not(.bad) .wrap{background:rgba(255,253,246,.96);border:1px solid var(--line);border-radius:26px;box-shadow:0 24px 60px rgba(10,8,4,.38);padding:34px 30px}
+  .darksec,.bad{background:transparent}
+  .hero{background:transparent}
+  .darksec .wrap,.bad .wrap{background:rgba(16,14,11,.97);border:1px solid #38322a;border-radius:26px;box-shadow:0 24px 60px rgba(0,0,0,.5);padding:34px 30px}
 </style>
 </head>
 <body>
