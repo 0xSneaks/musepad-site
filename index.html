@@ -115,14 +115,18 @@
     .statusbox img.logo,.fund img{width:140px;height:140px}
   }
 
-  /* === Split-fur background tune (2026-11-06): page floats over Muse's split fur, like the profile picture === */
+  /* === Split-fur background (2026-11-08): fur sits strictly BEHIND content; every section is its own separate, solid box with a clear fur gap between boxes === */
   body{background:#100e0b}
-  body::before{content:"";position:fixed;top:0;bottom:0;left:0;width:50%;background:url('fur-bg-black.webp') center/cover;z-index:-2}
-  body::after{content:"";position:fixed;top:0;bottom:0;right:0;width:50%;background:url('fur-bg-white.webp') center/cover;z-index:-2}
-  section:not(.hero):not(.darksec):not(.bad) .wrap{background:rgba(255,253,246,.96);border:1px solid var(--line);border-radius:26px;box-shadow:0 24px 60px rgba(10,8,4,.38);padding:34px 30px}
+  body::before{content:"";position:fixed;top:0;bottom:0;left:0;width:50%;background:url('fur-bg-black.webp') center/cover;z-index:-2;pointer-events:none}
+  body::after{content:"";position:fixed;top:0;bottom:0;right:0;width:50%;background:url('fur-bg-white.webp') center/cover;z-index:-2;pointer-events:none}
+  header{background:var(--bg);backdrop-filter:none}
+  section{padding:26px 0}
+  .hero{background:transparent;padding:26px 0}
+  .bad{margin-top:0;padding-top:26px}
+  section:not(.hero):not(.darksec):not(.bad) .wrap{background:#faf5e8;border:1px solid var(--line);border-radius:26px;box-shadow:0 24px 60px rgba(10,8,4,.38);padding:34px 30px}
   .darksec,.bad{background:transparent}
-  .hero{background:transparent}
-  .darksec .wrap,.bad .wrap{background:rgba(16,14,11,.97);border:1px solid #38322a;border-radius:26px;box-shadow:0 24px 60px rgba(0,0,0,.5);padding:34px 30px}
+  .darksec .wrap,.bad .wrap{background:#100e0b;border:1px solid #38322a;border-radius:26px;box-shadow:0 24px 60px rgba(0,0,0,.5);padding:34px 30px}
+  footer .wrap{background:#faf5e8;border:1px solid var(--line);border-radius:26px;box-shadow:0 24px 60px rgba(10,8,4,.38);padding:28px 30px}
 </style>
 </head>
 <body>
@@ -201,7 +205,7 @@
 <div class="furdiv"></div>
 
 
-<section id="vision" class="darksec" style="margin-top:0;padding-top:54px"><div class="wrap">
+<section id="vision" class="darksec"><div class="wrap">
   <h2>The vision: a launchpad that grows into an everything-market</h2>
   <p class="lead">This section is the vision — the direction MusePad is being built toward. None of it is live, available, or offered today. Every item is tagged with how it could exist: <b style="color:#fdfaf1">RAILS EXIST</b> = buildable today on existing Solana tech · <b style="color:#fdfaf1">VIA INTEGRATION</b> = exists through other venues or issuers MusePad would plug into · <b style="color:#fdfaf1">VISION</b> = regulated or future — not buildable by us directly · <b style="color:#fdfaf1">EXISTS — in-house code</b> = already built in our own codebase.</p>
   <div class="grid">
